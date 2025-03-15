@@ -1,0 +1,9 @@
+version: '3'
+services:
+  elicelab_database:
+    container_name: elicelab_database
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
