@@ -16,6 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         database: configService.get<string>('POSTGRES_DB'),
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
         autoLoadEntities: true,
+        // TODO: production에서는 synchronize: false로 설정해야 합니다.
         synchronize: true,
       }),
     }),
