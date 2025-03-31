@@ -27,7 +27,7 @@ export class ProductService {
   }
 
   // 제품 상세 정보 가져오는 로직
-  async getProductById(id: string): Promise<Product | null> {
+  async getProductById(id: string): Promise<Product> {
     const product = await this.productRepository.findOneBy({ id });
 
     if (isNullish(product)) {
